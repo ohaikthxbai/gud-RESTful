@@ -21,10 +21,10 @@ public class APIService {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("/json-string")
+	@Path("/json")
 	public String jsonString() {
 
-		return "{\"name\" : \"Insert Name Here\"}";
+		return "{\"name\" : \"InsertNameHere\"}";
 
 	}
 }
