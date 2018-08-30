@@ -27,4 +27,13 @@ public class APIService {
 		return "{\"name\" : \"InsertNameHere\"}";
 
 	}
+
+	@GET
+	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+	@Path("/animal/{name}")
+	public Response getAnimal(@PathParam("name") String name) {
+		Animal animal = new Animal(name);
+		return Response.status(200).entity(animal).build();
+
+	}
 }
